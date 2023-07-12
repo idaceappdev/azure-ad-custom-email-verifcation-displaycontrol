@@ -5,7 +5,8 @@ https://github.com/azure-ad-b2c/samples/tree/master/policies/custom-email-verifc
 
 However, I did run into an issue when trying to disable the **Continue** button while the e-mail verification code had not been clicked on the **Send Verification Code** button
 
-![A User flow diagram of this sample.](images/email-verification.png)
+![Send email verification.](images/email-verification.png)
+
 To fix this, I used a simple JQuery solution:
 
 ```csharp
@@ -37,3 +38,9 @@ var observer = new MutationObserver(function (mutations) {
 var target = document.getElementById('readOnlyEmail_success');
 observer.observe(target, { attributes: true, attributeFilter: ['style'] });
 ```
+
+## Custom HTML and CSS overview
+
+Azure AD B2C runs code in your customer's browser by using Cross-Origin Resource Sharing (CORS). At runtime, content is loaded from a URL you specify in your user flow or custom policy. Each page in the user experience loads its content from the URL you specify for that page. After content is loaded from your URL, it's merged with an HTML fragment inserted by Azure AD B2C, and then the page is displayed to your customer. I was able to resolve the issue by adding the above code in a <Script> tag at the bottom of my HTML pages.
+
+![HTML Content Merging.](images/html-content-merging.png)
