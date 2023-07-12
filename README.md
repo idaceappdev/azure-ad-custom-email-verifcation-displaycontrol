@@ -44,3 +44,9 @@ observer.observe(target, { attributes: true, attributeFilter: ['style'] });
 Azure AD B2C runs code in your customer's browser by using Cross-Origin Resource Sharing (CORS). At runtime, content is loaded from a URL you specify in your user flow or custom policy. Each page in the user experience loads its content from the URL you specify for that page. After content is loaded from your URL, it's merged with an HTML fragment inserted by Azure AD B2C, and then the page is displayed to your customer. I was able to resolve the issue by adding the above code in a <Script> tag at the bottom of my HTML pages.
 
 ![HTML Content Merging.](images/html-content-merging.png)
+
+## Running the application
+
+When you run the application, you'll be able to reset the your password by entering the email of a user. When you click on verfiy code, the app sends a verification code to the email account you specified. You will then be able to contine the flow once you enter the verification code:
+
+![Email verification flow.](images/finalflow.png)
