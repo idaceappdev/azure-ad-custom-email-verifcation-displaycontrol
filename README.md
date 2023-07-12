@@ -47,6 +47,6 @@ Azure AD B2C runs code in your customer's browser by using Cross-Origin Resource
 
 ## Running the application
 
-When you run the application, you'll be able to reset the your password by entering the email of a user. When you click on verfiy code, the app sends a verification code to the email account you specified. You will then be able to contine the flow once you enter the verification code:
+When you run the application, you'll be able to reset the your password by entering the email of a user. When you click on verify code, the app sends a verification code to the email account you specified. You will then be able to continue the flow once you enter the verification code:
 
 ![Email verification flow.](images/finalflow.png)
