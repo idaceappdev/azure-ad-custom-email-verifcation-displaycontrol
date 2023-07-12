@@ -3,10 +3,9 @@
 The set of policies that demonstrates how to use a Custom email verification solution is well documented here:
 https://github.com/azure-ad-b2c/samples/tree/master/policies/custom-email-verifcation-displaycontrol. These allow you to send your own custom email verification during sign-up or during the password reset user journeys.
 
-However, I did run into an issue when trying to disable the **Continue** button while the e-mail verification code had not been clicked on the **Send Verification Code** button as shown below.
+However, I did run into an issue when trying to disable the **Continue** button while the e-mail verification code had not been clicked on the **Send Verification Code** button
 
-[Send verification code.](images/email-verification.png)
-
+![A User flow diagram of this sample.](images/email-verification.png)
 To fix this, I used a simple JQuery solution:
 
 ```csharp
