@@ -45,6 +45,16 @@ Azure AD B2C runs code in your customer's browser by using Cross-Origin Resource
 
 ![HTML Content Merging.](images/html-content-merging.png)
 
+I finally updated the **TRUSTFRAMEWORKEXTENSIONS.xml** policy file as follows:
+
+```csharp
+      <ContentDefinition Id="api.signuporsignin">
+        <LoadUri>https://sebichondostorageaccount.blob.core.windows.net/myb2ccontainer/UnifiedSSP.html</LoadUri>
+        <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
+        <DataUri>urn:com:microsoft:aad:b2c:elements:contract:unifiedssp:2.1.8</DataUri>
+      </ContentDefinition>
+```
+
 ## Running the application
 
 When you run the application, you'll be able to reset the your password by entering the email of a user. When you click on verify code, the app sends a verification code to the email account you specified. You will then be able to continue the flow once you enter the verification code:
