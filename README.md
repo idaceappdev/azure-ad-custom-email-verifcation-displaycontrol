@@ -49,7 +49,7 @@ I finally updated the **TRUSTFRAMEWORKEXTENSIONS.xml** policy file as follows:
 
 ```csharp
 <ContentDefinition Id="api.signuporsignin">
-    <LoadUri>https://sebichondostorageaccount.blob.core.windows.net/myb2ccontainer/UnifiedSSP.html</LoadUri>
+    <LoadUri>https://<mystorageaccount>/UnifiedSSP.html</LoadUri>
     <RecoveryUri>~/common/default_page_error.html</RecoveryUri>
     <DataUri>urn:com:microsoft:aad:b2c:elements:contract:unifiedssp:2.1.8</DataUri>
 </ContentDefinition>
